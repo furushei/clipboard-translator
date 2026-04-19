@@ -333,5 +333,3 @@ class TestCopyResult(unittest.TestCase):
         mock_copy.assert_not_called()
 
 
-if __name__ == "__main__":
-    unittest.main()
