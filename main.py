@@ -232,7 +232,7 @@ class SimpleTranslatorApp:
         try:
             with self.client.messages.stream(
                 model=self.model_var.get(),
-                max_tokens=MAX_TOKENS,
+                max_tokens=self.max_tokens_var.get(),
                 messages=[{"role": "user", "content": prompt}],
             ) as stream:
                 self.root.after(0, lambda: self.status_var.set("Translating..."))
